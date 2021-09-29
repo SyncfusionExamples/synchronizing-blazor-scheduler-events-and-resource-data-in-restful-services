@@ -1,0 +1,1 @@
+# synchronizing-blazor-scheduler-events-and-resource-data-in-odata-services
