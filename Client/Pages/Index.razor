@@ -1,0 +1,22 @@
+﻿@page "/"
+
+@using BlazorScheduler.Shared.Models
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="EventModel" Width="100%" Height="650px" CurrentView="View.Month" SelectedDate="new DateTime(2021, 9, 1)">
+    <ScheduleGroup Resources="@GroupData"></ScheduleGroup>
+    <ScheduleResources>
+        <ScheduleResource TItem="ResourceModel" TValue="int" Field="OwnerId" Title="Choose Owner" Name="Owners" IdField="Id" TextField="Name" ColorField="Color">
+            <SfDataManager Url="/odata/Resource" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+        </ScheduleResource>
+    </ScheduleResources>
+    <ScheduleEventSettings TValue="EventModel">
+        <SfDataManager Url="/odata/Schedule" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+    </ScheduleEventSettings>
+</SfSchedule>
+
+@code{
+    private string[] GroupData = new string[] { "Owners" };
+}
