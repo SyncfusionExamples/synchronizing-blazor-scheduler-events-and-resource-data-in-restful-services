@@ -2,6 +2,7 @@
 using BlazorScheduler.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -28,6 +29,23 @@ namespace BlazorScheduler.Server.Controllers
         public string Get(int id)
         {
             return "value";
+        }
+
+        [HttpPut]
+        public void Put(DateTime StartDate, DateTime EndDate, [FromBody] EventModel eventModel)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Entry(eventModel).State = EntityState.Modified;
+                    _context.SaveChanges();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
         }
 
         [HttpPost]
