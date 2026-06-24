@@ -1,8 +1,8 @@
-# Synchronize Blazor Resource Scheduler with RESTful Services
+# Synchronize Blazor Scheduler events and resources using RESTful services
 
 ## Repository Description
 
-This repository demonstrates how to integrate and synchronize the Syncfusion Blazor Resource Scheduler with RESTful web services. It provides a complete implementation example for managing scheduler events and resource data through API calls, enabling real-time data synchronization between the client-side Blazor scheduler component and a backend RESTful service.
+This repository demonstrates how to synchronize event and resource data in the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) by integrating with RESTful web services. It provides a complete implementation for managing scheduler data through API calls, enabling real-time synchronization between the client-side component and a backend service.
 
 ## Project Overview
 
