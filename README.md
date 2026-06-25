@@ -1,26 +1,18 @@
 # Synchronize Blazor Scheduler events and resources using RESTful services
 
-## Repository Description
-
-This repository demonstrates how to synchronize event and resource data in the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) by integrating with RESTful web services. It provides a complete implementation for managing scheduler data through API calls, enabling real-time synchronization between the client-side component and a backend service.
-
-## Project Overview
-
-This project showcases best practices for connecting the Syncfusion Blazor Scheduler component with RESTful services. The implementation includes handling event operations (create, read, update, delete) and managing resource data through HTTP API calls, demonstrating a practical approach to building dynamic scheduling applications with Blazor.
+This repository demonstrates how to synchronize event and resource data in the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) through RESTful web service integration. It showcases handling CRUD operations for events and managing resource data via HTTP API calls, enabling real-time synchronization between the client-side component and backend services. The sample serves as a practical guide for building dynamic and data-driven scheduling applications using Syncfusion Blazor components.
 
 ## Prerequisites
 
 * Visual Studio 2022
 * .NET 6.0 or later
-* Syncfusion Blazor packages
 
 ## How to run the project
 
-* Checkout this project to a location in your disk.
-* Open the solution file using the Visual Studio 2022.
-* Restore the NuGet packages by rebuilding the solution.
-* Build the solution to ensure all dependencies are installed.
-* Run the project and navigate to the scheduler component in your browser.
+1. Checkout this project to your local machine
+2. Open the solution file using Visual Studio 2022
+3. Build the solution to restore the required NuGet packages
+4. Press `F5` to start the application
 
 ## Features
 
