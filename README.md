@@ -4,8 +4,8 @@ This repository demonstrates how to synchronize event and resource data in the [
 
 ## Prerequisites
 
-* Visual Studio 2022
-* .NET 6.0 or later
+* Visual Studio 2022 (version 18.0 or later) with the **.NET 10.0 SDK**
+* .NET 10.0 or later
 
 ## How to run the project
 
