@@ -1,4 +1,4 @@
-﻿using BlazorScheduler.Models;
+﻿using BlazorScheduler.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 using System.IO;
 
@@ -15,7 +15,7 @@ namespace BlazorScheduler.Server.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Directory.GetCurrentDirectory() + "\\App_Data\\ScheduleData.mdf;Integrated Security=True;Connect Timeout=30");
+                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Directory.GetCurrentDirectory().Replace("Server", "Shared") + "\\App_Data\\ScheduleData.mdf;Integrated Security=True;Connect Timeout=30");
             }
         }
 

@@ -15,10 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Server\**" />
-    <Content Remove="Server\**" />
-    <EmbeddedResource Remove="Server\**" />
-    <None Remove="Server\**" />
+    <ProjectReference Include="..\Shared\BlazorScheduler.Shared.csproj" />
   </ItemGroup>
 
 </Project>

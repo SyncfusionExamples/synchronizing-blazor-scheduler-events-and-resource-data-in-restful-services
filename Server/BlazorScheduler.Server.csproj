@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\Models\*.cs" LinkBase="Models" />
+    <ProjectReference Include="..\Shared\BlazorScheduler.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
 <Solution>
-  <Project Path="BlazorScheduler.csproj" />
+  <Project Path="Client/BlazorScheduler.Client.csproj" />
   <Project Path="Server/BlazorScheduler.Server.csproj" />
+  <Project Path="Shared/BlazorScheduler.Shared.csproj" />
 </Solution>

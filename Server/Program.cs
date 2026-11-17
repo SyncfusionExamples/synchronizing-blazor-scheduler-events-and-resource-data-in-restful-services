@@ -17,7 +17,7 @@ builder.Services.AddMvc().AddNewtonsoftJson(options =>
     options.SerializerSettings.MetadataPropertyHandling = MetadataPropertyHandling.Ignore;
 });
 builder.Services.AddCors(o => o.AddDefaultPolicy(p => p.WithOrigins("https://localhost:7100", "http://localhost:5100").AllowAnyHeader().AllowAnyMethod()));
-builder.Services.AddDbContext<SchedulerContext>(context => context.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Directory.GetCurrentDirectory() + "\\App_Data\\ScheduleData.mdf;Integrated Security=True;Connect Timeout=30"));
+builder.Services.AddDbContext<SchedulerContext>(context => context.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Directory.GetCurrentDirectory().Replace("Server", "Shared") + "\\App_Data\\ScheduleData.mdf;Integrated Security=True;Connect Timeout=30"));
 
 var app = builder.Build();
 
