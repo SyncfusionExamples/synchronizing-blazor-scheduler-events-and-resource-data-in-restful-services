@@ -16,8 +16,7 @@ builder.Services.AddMvc().AddNewtonsoftJson(options =>
     options.SerializerSettings.MissingMemberHandling = MissingMemberHandling.Ignore;
     options.SerializerSettings.MetadataPropertyHandling = MetadataPropertyHandling.Ignore;
 });
-builder.Services.AddControllersWithViews();
-builder.Services.AddRazorPages();
+builder.Services.AddCors(o => o.AddDefaultPolicy(p => p.WithOrigins("https://localhost:7100", "http://localhost:5100").AllowAnyHeader().AllowAnyMethod()));
 builder.Services.AddDbContext<SchedulerContext>(context => context.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Directory.GetCurrentDirectory().Replace("Server", "Shared") + "\\App_Data\\ScheduleData.mdf;Integrated Security=True;Connect Timeout=30"));
 
 var app = builder.Build();
@@ -26,25 +25,19 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
-    app.UseWebAssemblyDebugging();
 }
 else
 {
-    app.UseExceptionHandler("/Error");
+    app.UseExceptionHandler(e => e.Run(c => { c.Response.StatusCode = 500; return Task.CompletedTask; }));
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 
-app.UseBlazorFrameworkFiles();
-app.UseStaticFiles();
-
 app.UseRouting();
+app.UseCors();
 
-
-app.MapRazorPages();
 app.MapControllers();
-app.MapFallbackToFile("index.html");
 
 app.Run();

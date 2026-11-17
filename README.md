@@ -4,15 +4,16 @@ This repository demonstrates how to synchronize event and resource data in the [
 
 ## Prerequisites
 
-* Visual Studio 2022
-* .NET 6.0 or later
+* Visual Studio 2022 (17.14+) or Visual Studio 2026
+* .NET 10.0 SDK or later
 
 ## How to run the project
 
 1. Checkout this project to your local machine
-2. Open the solution file using Visual Studio 2022
+2. Open `BlazorScheduler.slnx` using Visual Studio
 3. Build the solution to restore the required NuGet packages
-4. Press `F5` to start the application
+4. Set both `BlazorScheduler.Server` (REST API, https://localhost:7034) and `BlazorScheduler.Client` (Blazor WebAssembly standalone app) as startup projects
+5. Press `F5` to start the application
 
 ## Features
 
