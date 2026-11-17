@@ -1,5 +1,5 @@
 ﻿using BlazorScheduler.Server.Data;
-using BlazorScheduler.Shared.Models;
+using BlazorScheduler.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;

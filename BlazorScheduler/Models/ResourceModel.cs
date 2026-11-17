@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BlazorScheduler.Shared.Models
+namespace BlazorScheduler.Models
 {
     public class ResourceModel
     {
