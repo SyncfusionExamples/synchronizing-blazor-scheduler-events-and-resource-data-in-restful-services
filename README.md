@@ -12,7 +12,7 @@ This repository demonstrates how to synchronize event and resource data in the [
 1. Checkout this project to your local machine
 2. Open `BlazorScheduler.slnx` using Visual Studio
 3. Build the solution to restore the required NuGet packages
-4. Set both `BlazorScheduler.Server` (REST API, https://localhost:7034) and `BlazorScheduler.Client` (Blazor WebAssembly standalone app) as startup projects
+4. Set both `BlazorScheduler.Server` (REST API, https://localhost:7034) and `BlazorScheduler` (Blazor WebAssembly standalone app) as startup projects
 5. Press `F5` to start the application
 
 ## Features
